@@ -1,0 +1,230 @@
+.grid-container {
+    display: grid;
+    height: 100vh;
+    padding: 0%;
+    background-color: hwb(337 6% 11%);
+    grid-template-areas: 
+    "navbar header"
+    "navbar main"
+    "footer footer";
+    grid-template-columns: 15% auto;
+    grid-template-rows: 20% auto 20%;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+}
+
+.menu {
+    grid-area: navbar;
+    height: 100%;
+    background-color:#000000;
+    font-size:large;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    display: block;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.galery {
+    display: grid;
+    grid-template-columns: repeat(4 auto)
+}
+
+.navbar {
+    display: block;
+}
+
+.dinamic-galery {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color:#000000;
+}
+.icon-footer {
+    text-align: center;
+    padding-top: 1%;
+    color: #ffffff;
+  }
+
+.icon {
+    color: white;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    text-align: center;
+    padding: 3%;
+}
+.logo img {
+    width: 10vw;
+    height: 15vh;
+    margin-top: 10%;
+    margin-bottom: 11%;
+}
+.auto {
+    color: lightgoldenrodyellow;
+    font-weight: bolder;
+}
+.repro {
+    color:#fa1d72;
+    font-weight: bolder;
+}
+.description-logo {
+    color:white;
+    font-weight: lighter;
+    font-size:x-small;
+}
+.nav-menu {
+    background-color:#000000 ;
+    list-style: none;
+    line-height: 10vh;
+    color: white;
+    padding-left: 0%;
+    
+}
+.li-menu {
+    text-align: center;
+}
+.li-menu:hover {
+    cursor: pointer;
+    
+    background-color:#000000;
+}
+
+.dinamic-galery img {
+    height: 20vh;
+}
+
+.galery {
+    background-color: #000000;
+    overflow-y: scroll;
+}
+
+.galery-tittle {
+    background-color: hsla(335, 100%, 45%, 0.808);
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+}
+
+.galery-section {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2%;
+    grid-template-columns: auto auto auto;
+}
+.card {
+    transition: border  01s ease;
+    transition: background-color  01s ease;
+    border: #f3185a solid 1px;
+    width: 16rem;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+.card:hover {
+    border:#030303 solid 3px;
+    background-color: rgb(172, 62, 95);
+}
+
+.btn-primary {
+    transition: background-color 01s ease;
+    background-color: hsl(0, 0%, 0%);
+    border:#F2F2F2 solid 1px;
+    transition: background-color 01s ease;
+    transition: color 01s ease;
+}
+
+.btn-primary:hover {
+    background-color:white;
+    border: #000000 solid 1px;
+    color:hsl(0, 0%, 0%);
+}
+
+@media (max-width: 576px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        "navbar" 
+        "header"
+        "main" 
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 12% 20% auto 20%;
+    }
+
+    .navbar {
+        display: block;
+        z-index: 1000;
+
+    }
+    .navbar-toggler {
+        display: block;
+        color:white;
+        font-weight: lighter;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-responsive {
+        display: flex;
+        align-items: flex-start;
+        }
+
+    .logo img {
+        height: 30%;
+    }
+    .auto {
+        padding-left: 5%;
+    }
+    .description-logo {
+        display: none;
+    }
+    .dinamic-galery {
+        display: grid;
+        color:black;
+    }
+    
+    .nav-menu {
+        z-index: 1000;
+    }
+
+    .galery {
+        display: grid;
+        grid-column: 1fr; }
+
+    .galery-tittle {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+        
+    .galery-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
